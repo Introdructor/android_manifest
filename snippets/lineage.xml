@@ -18,6 +18,14 @@
   <project path="hardware/qcom-caf/thermal" name="android_hardware_qcom_thermal" remote="lineage" />
   <project path="hardware/qcom-caf/vr" name="android_hardware_qcom_vr" remote="lineage" />
 
+  <!-- add guard for AOSP hardware/qcom dir -->
+  <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" remote="lineage" />
+  <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" remote="lineage" />
+  </project>
+  <project path="hardware/qcom-caf/sm8250/audio" name="android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-18.1-caf-sm8250" remote="lineage" />
+  <project path="hardware/qcom-caf/sm8250/display" name="android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-18.1-caf-sm8250" remote="lineage" />
+  <project path="hardware/qcom-caf/sm8250/media" name="android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-18.1-caf-sm8250" remote="lineage" />
+
   <!-- Sepolicy -->
   <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="lineage" />
   <project path="device/qcom/sepolicy-legacy" name="android_device_qcom_sepolicy" remote="lineage" revision="lineage-18.1-legacy" />
